@@ -1,0 +1,5 @@
+@startuml List of possible ArchiMate SequenceParticipantBorderThickness
+
+listsprites
+
+@enduml

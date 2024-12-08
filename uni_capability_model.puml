@@ -1,0 +1,347 @@
+@startuml UNI Capability Model (HERMS)
+
+!include <archimate/Archimate>
+!include archimate_custom_processing_and_styling.puml 
+' Source: https://github.com/plantuml-stdlib/Archimate-PlantUML
+
+top to bottom direction
+' left to right direction
+skinparam wrapWidth 1024
+
+hide empty members
+skinparam nodesep 40
+skinparam ranksep 40
+skinparam linetype ortho
+skinparam WrapWidth 20
+title UNI Capability Model (HERMS)
+
+' -----------------------------
+' Strategy & Governance
+' -----------------------------
+Strategy_Capability(sc_StrategyGovernance, "Strategy & Governance", true) {
+    Strategy_Capability(sc_StrategyMgt, "Strategy Management", true) {
+        Strategy_Capability(sc_BusinessHorizonScan, "Business Horizon Scanning")
+        Strategy_Capability(sc_CorporatePerformanceMgt, "Corporate Performance Mgt")
+        Strategy_Capability(sc_StrategicPlanDev, "Strategic Plan Development")
+        Strategy_Capability(sc_StrategicPlanMgt, "Strategic Plan Mgt")
+        Strategy_Capability(sc_StrategicReporting, "Strategic Reporting")
+        Strategy_Capability(sc_StrategicVisionDev, "Strategic Vision Development")
+    }
+
+    Strategy_Capability(sc_BusCapabilityMgt, "Business Capability Management", true) {
+        Strategy_Capability(sc_BenefitsMgt, "Benefits Mgt")
+        Strategy_Capability(sc_ProgrammeProjMgt, "Programme & Project Mgt")
+        Strategy_Capability(sc_OrganisationalDesign, "Organisational Design")
+        Strategy_Capability(sc_ChangePortfolioMgt, "Change Portfolio Mgt")
+        Strategy_Capability(sc_EnterpriseArch, "Enterprise Architecture")
+        Strategy_Capability(sc_QualityMgt, "Quality Mgt")
+    }
+
+    Strategy_Capability(sc_CorpGov, "Corporate Governance", true) {
+        Strategy_Capability(sc_RiskMgt, "Risk Mgt")
+        Strategy_Capability(sc_ComplianceMonitoringReporting, "Compliance Monitoring & Reporting")
+        Strategy_Capability(sc_PolicyRegulationMgt, "Policy & Regulation Mgt")
+        Strategy_Capability(sc_InternalAuditReport, "Internal Audit & Reporting")
+        Strategy_Capability(sc_BusinessContinuity, "Business Continuity Mgt")
+    }
+}
+
+' -----------------------------
+' Teaching & Learning
+' -----------------------------
+Strategy_Capability(sc_TeachingLearning, "Teaching & Learning", true) {
+    Strategy_Capability(sc_CurriculumMgt, "Curriculum Management", true) {
+        Strategy_Capability(sc_CurriculumDesign, "Curriculum Design")
+        Strategy_Capability(sc_CurriculumResourceDevelopment, "Curriculum & Resource Development")
+        Strategy_Capability(sc_ProfessionalAccreditation, "Professional Accreditation")
+        Strategy_Capability(sc_ProfessionalLearningStaff, "Professional Learning (Staff)")
+        Strategy_Capability(sc_CurriculumRetirementMgt, "Curriculum Retirement Mgt")
+        Strategy_Capability(sc_CurrChangeMgt, "Curriculum Change Mgt")
+        Strategy_Capability(sc_CurrPerfMgt, "Curriculum Performance Mgt")
+    }
+
+    Strategy_Capability(sc_StudentAttractRecruit, "Student Attraction & Recruitment", true) {
+        Strategy_Capability(sc_ScholarshipBusaryMgt, "Scholarship & Busary Mgt")
+        Strategy_Capability(sc_ProspectiveStudentEngagement, "Prospective Student Engagement")
+        Strategy_Capability(sc_InternationalStudentRecruitment, "International Student Recruitment")
+        Strategy_Capability(sc_DomesticStudentRecruitment, "Domestic Student Recruitment")
+        Strategy_Capability(sc_StudentRecruitmentAgentMgt, "Student Recruitment Agent Mgt")
+    }
+
+    Strategy_Capability(sc_StudentEnrolment, "Student Enrolment", true) {
+        Strategy_Capability(sc_StudentInductionMgt, "Student Induction Mgt")
+        Strategy_Capability(sc_ProgrammeEnrol, "Programme Enrolment")
+        Strategy_Capability(sc_ModuleSelectionMgt, "Module Selection Mgt")
+    }
+
+    Strategy_Capability(sc_TeachLearnDelivery, "Teaching & Learning Delivery", true) {
+        Strategy_Capability(sc_NonPresenceTeach, "Non Presence Based Teaching")
+        Strategy_Capability(sc_PresenceTeach, "Presence Based Teaching")
+        Strategy_Capability(sc_TeachingLearningContentMgt, "Teaching & Learning Content Mgt")
+        Strategy_Capability(sc_TeachingPlacementMgt, "Teaching Placement Mgt")
+    }
+
+    Strategy_Capability(sc_StudentCompletionGrad, "Student Completion & Graduation", true) {
+        Strategy_Capability(sc_GraduationEligibilityMgt, "Graduation Eligibility Mgt")
+        Strategy_Capability(sc_GraduationEventMgt, "Graduation Event Mgt")
+        Strategy_Capability(sc_GraduationRecordCertificateMgt, "Graduation Record Certificate Mgt")
+        Strategy_Capability(sc_NonAcademicAchievementMgt, "Non-Academic Achievement Mgt")
+    }
+
+    Strategy_Capability(sc_AlumniEngagement, "Alumni Engagement", true) {
+        Strategy_Capability(sc_AlumniRelationshipMgt, "Alumni Relationship Mgt")
+        Strategy_Capability(sc_AlumniEventsCampaign, "Alumni Events & Campaign Mgt")
+        Strategy_Capability(sc_BenefactorMgt, "Benefactor Mgt")
+    }
+
+    Strategy_Capability(sc_StudentAdmissionMgt, "Student Admission Management", true) {
+        Strategy_Capability(sc_StudentAppMgt, "Student Application Mgt")
+        Strategy_Capability(sc_OfferAcceptQuotaMgt, "Offer, Acceptance & Quota Mgt")
+    }
+
+    Strategy_Capability(sc_StudentAssessment, "Student Assessment", true) {
+        Strategy_Capability(sc_AssessmentDelivery, "Assessment Delivery")
+        Strategy_Capability(sc_AssessmentResultsMgt, "Assessment Results Mgt")
+        Strategy_Capability(sc_AssessmentMarkingFeedback, "Assessment Marking & Feedback")
+        Strategy_Capability(sc_AssessmentAdministration, "Assessment Administration")
+    }
+
+    Strategy_Capability(sc_AcademicAdministration, "Academic Administration", true) {
+        Strategy_Capability(sc_AcademicPolicyRegMgt, "Academic Policy & Regulation Mgt")
+        Strategy_Capability(sc_AcademicYearScheduling, "Academic Year Scheduling")        
+        Strategy_Capability(sc_TimetablingMgt, "Timetabling Mgt")
+    }
+
+    Strategy_Capability(sc_StudentAdministration, "Student Administration", true) {
+        Strategy_Capability(sc_StudentMobility, "Student Mobility")
+        Strategy_Capability(sc_StudentFinAdmin, "Student Financial Administration")
+        Strategy_Capability(sc_EnrolStatusMgt, "Enrolment Status Mgt")
+        Strategy_Capability(sc_ProgrammeTransferMgt, "Programme Transfer Mgt")
+        Strategy_Capability(sc_StudentRecordsDetailsMgt, "Student Records & Details Mgt")
+        Strategy_Capability(sc_StudentExeptionalFactorsMisconductAppealMgt, "Student Exeptional Factors Misconduct / Appeal Mgt")
+    }
+
+    Strategy_Capability(sc_StudentSupportWellbeing, "Student Support & Wellbeing Management", true) {
+        Strategy_Capability(sc_AcademicSkillDevelopment, "Academic Skill Development")
+        Strategy_Capability(sc_StudentFinancialAdvice, "Student Financial Advice")
+        Strategy_Capability(sc_HousingAdvice, "Housing Advice")
+        Strategy_Capability(sc_StudentHealthWellbeing, "Student Health & Wellbeing")
+        Strategy_Capability(sc_DisabilitySupportMgt, "Disability Support Mgt")
+        Strategy_Capability(sc_PersonalLearningMgt, "Personal Learning Mgt")
+        Strategy_Capability(sc_AcademicAdviceMgt, "Academic Advice Mgt")
+        Strategy_Capability(sc_AcademicAdviceMgt, "Career & Employability Engagement Mgt")        
+        Strategy_Capability(sc_StudentEngagementRetention, "Student Engagement & Retention")
+        Strategy_Capability(sc_PersonalTutorProvision, "Personal Tutor Provision")
+    }
+}
+
+' -----------------------------
+' Research
+' -----------------------------
+
+Strategy_Capability(sc_Research, "Research", true) {
+    Strategy_Capability(sc_ResearchOpportunityAnalysis, "Research Opportunity Analysis", true) {
+        Strategy_Capability(sc_ResearchPrioritisation, "Research Prioritisation")
+        Strategy_Capability(sc_CollaborationOpportunityMgt, "Collaboration Opportunity Mgt")
+        Strategy_Capability(sc_ResearchProgrammeDevelopment, "Research Programme Development")
+    }
+
+    Strategy_Capability(ResearchFunding, "Research Funding", true) {
+        Strategy_Capability(sc_ResearchFundingId, "Research Funding Identification")
+        Strategy_Capability(sc_ResearchFundsMgt, "Research Funds Mgt")
+    }
+
+    Strategy_Capability(ResearchDelivery, "Research Delivery", true) {
+        Strategy_Capability(sc_ResearchOutputMgt, "Research Output Mgt")
+        Strategy_Capability(sc_ResearchProduction, "Research Production")
+        Strategy_Capability(sc_ResearchDataSetMgt, "Research DataSet Mgt")
+    }
+
+    Strategy_Capability(ResearchPublications, "Research Publications", true) {
+        Strategy_Capability(sc_ResearchPubMgt, "Research Publication Mgt")
+        Strategy_Capability(sc_ResearchOutputReporting, "Research Output Reporting")
+    }
+
+    Strategy_Capability(ResearchImprovement, "Research Improvement", true) {
+        Strategy_Capability(sc_ResearchQualityMgt, "Research Quality Mgt")
+        Strategy_Capability(sc_ResearcherPerfMgt, "Researcher Performance Mgt")
+        Strategy_Capability(sc_ResearchProgrammePerformanceMgt, "Research Programme Performance Mgt")
+    }
+
+    Strategy_Capability(ResearchTraining, "Research Training", true) {
+        Strategy_Capability(sc_ResearcherTrainingDevelopment, "Researcher Training & Development")
+        Strategy_Capability(sc_PGRStudentSkillsDevelopment, "PGR Student Skills Development")
+        Strategy_Capability(sc_PGRSupervisorDevelopment, "PGR Supervisor Development")
+    }
+
+    Strategy_Capability(ResearchImpact, "Research Impact", true) {
+        Strategy_Capability(sc_ManageResearchRel, "Manage Research Relationships")
+        Strategy_Capability(sc_CommercialResearchOutcomes, "Commercial Research Outcomes")
+        Strategy_Capability(sc_NonCommercialResearchImpactMgt, "Non-Commercial Research Impact Mgt")
+    }
+
+    Strategy_Capability(ResearchAdmin, "Research Administration", true) {
+        Strategy_Capability(sc_ResearchComplianceMgt, "Research Compliance Mgt")
+        Strategy_Capability(sc_ResearchInfraMgt, "Research Infrastructure Mgt")
+    }
+}
+
+' -----------------------------
+' Commercial Activity
+' -----------------------------
+Strategy_Capability(CommercialActivity, "Commercial Activity", true) {
+    Strategy_Capability(CommercialSourcing, "Commercial Sourcing", true) {
+        Strategy_Capability(sc_CommOppId, "Commercial Opportunity Identification")
+        Strategy_Capability(sc_CommercialMarketAnalysis, "Commercial Market Analysis")
+        Strategy_Capability(sc_CommOppAssessment, "Commercial Opportunity Assessment")
+    }
+
+    Strategy_Capability(CommercialEngagement, "Commercial Engagement", true) {
+        Strategy_Capability(sc_CommPartnerEngagement, "Commercial Partner Engagement")
+        Strategy_Capability(sc_CommPartnerIntegration, "Commercial Partner Integration & Transition")
+    }
+
+    Strategy_Capability(CommercialDelivery, "Commercial Delivery", true) {
+        Strategy_Capability(sc_CommActivityOutputMgt, "Commercial Activity Output Mgt")
+        Strategy_Capability(sc_CommActivityIssueMgt, "Commercial Activity Issue Mgt")
+        Strategy_Capability(sc_CommActivityExitMgt, "Commercial Activity Exit Mgt")
+    }
+
+    Strategy_Capability(CommercialMonitoring, "Commercial Monitoring", true) {
+        Strategy_Capability(sc_CommContractPerfMgt, "Commercial Contract Performance Mgt")
+        Strategy_Capability(sc_CommActivityReport, "Commercial Activity Reporting")
+        Strategy_Capability(sc_CommContingencyPlan, "Commercial Contingency Planning")
+    }
+}
+
+' -----------------------------
+' Enabling Capabilities
+' -----------------------------
+Strategy_Capability(EnablingCapabilities, "Enabling Capabilities", true) {
+    Strategy_Capability(GovPubStakeholderRel, "Government, Public & Stakeholder Relationships", true) {
+        Strategy_Capability(sc_GovRelMgt, "Government Relationship Mgt")
+        Strategy_Capability(sc_IndustryRelMgt, "Industry Relationship Mgt")
+        Strategy_Capability(sc_OtherTertiaryRelMgt, "Other Tertiary Institution Relationship Mgt")
+        Strategy_Capability(sc_MediaRelationsMgt, "Media Relations Mgt")
+        Strategy_Capability(sc_InternalStakeholderRelMgt, "Internal Stakeholder Relationship Mgt")
+        Strategy_Capability(sc_PublicRelMgt, "Public Relationship Mgt")
+    }
+
+    Strategy_Capability(PromotionsMgt, "Promotions Management", true) {
+        Strategy_Capability(sc_BrandMgt, "Brand Mgt")
+        Strategy_Capability(sc_CampaignMgt, "Campaign Mgt")
+        Strategy_Capability(sc_EventMgt, "Event Mgt")
+        Strategy_Capability(sc_MarketResearch, "Market Research")
+        Strategy_Capability(sc_MarketingMgt, "Marketing Mgt")
+        Strategy_Capability(sc_Merchandising, "Merchandising")
+    }
+
+    Strategy_Capability(SupportingServices, "Supporting Services", true) {
+        Strategy_Capability(sc_FoodRetailMgt, "Food & Retail Mgt")
+        Strategy_Capability(sc_ReligiousSupport, "Religious Support")
+        Strategy_Capability(sc_SportRecreationMgt, "Sport & Recreation Mgt")
+        Strategy_Capability(sc_VenueMgt, "Venue Mgt")
+        Strategy_Capability(sc_ChildCareMgt, "Child Care Mgt")
+        Strategy_Capability(sc_HealthCareMgt, "Health Care Mgt")
+        Strategy_Capability(sc_PrintingMgt, "Printing Mgt")
+        Strategy_Capability(sc_InternalComms, "Internal Communications")
+        Strategy_Capability(sc_ComplaintComplimentMgt, "Complaint & Compliment Mgt")
+    }
+
+    Strategy_Capability(HumanResourceMgt, "Human Resource Management", true) {
+        Strategy_Capability(sc_WorkforcePlanning, "Workforce Planning")
+        Strategy_Capability(sc_StaffRecruitment, "Staff Recruitment")
+        Strategy_Capability(sc_TalentMgt, "Talent Mgt")
+        Strategy_Capability(sc_RemunEntitlementMgt, "Remuneration & Entitlements Mgt")
+        Strategy_Capability(sc_WorkforceRelationsMgt, "Workforce Relations Mgt")
+        Strategy_Capability(sc_StaffEngagement, "Staff Engagement")
+        Strategy_Capability(sc_OccHealth, "Occupational Health")
+        Strategy_Capability(sc_EmployeePerfMgt, "Employee Performance Mgt")
+        Strategy_Capability(sc_TrainingDev, "Training & Development")
+        Strategy_Capability(sc_WorkforceReporting, "Workforce Reporting")
+        Strategy_Capability(sc_EmployeeSupport, "Employee Support")
+        Strategy_Capability(sc_StaffRecordsDetailsMgt, "Staff Records & Details Mgt")
+        Strategy_Capability(sc_StaffAbsenceMgt, "Staff Absence Mgt")
+    }
+
+    Strategy_Capability(ICTMgt, "Information & Communication Technology Mgt", true) {
+        Strategy_Capability(sc_InfrastructureLifecycleMgt, "Infrastructure Lifecycle Mgt")
+        Strategy_Capability(sc_ApplicationLifecycleMgt, "Application Lifecycle Mgt")
+        Strategy_Capability(sc_ICTServiceSupport, "ICT Service Support")
+        Strategy_Capability(sc_DigitalCommunicationMgt, "Digital Communication Mgt")
+        Strategy_Capability(sc_IdentityAccessMgt, "Identity & Access Mgt")
+        Strategy_Capability(sc_HPC, "High Performance Computing")
+        Strategy_Capability(sc_EndUserComputing, "End User Computing")
+    }
+
+    Strategy_Capability(LibraryMgt, "Library Management", true) {
+        Strategy_Capability(sc_LibraryCollectionAccessMgt, "Library Collection Access Mgt")
+        Strategy_Capability(sc_LibraryCollectionResourceMgt, "Library Collection Resource Mgt")
+        Strategy_Capability(sc_ArtMuseumCollectionMgt, "Art/Museum Collection Mgt")
+        Strategy_Capability(sc_LibraryMembershipMgt, "Library Membership Mgt")
+    }
+
+    Strategy_Capability(InformationMgt, "Information Management", true) {
+        Strategy_Capability(sc_InfoSearchDiscovery, "Information Search & Discovery")
+        Strategy_Capability(sc_InfoDataSecurityMgt, "Information & Data Security Mgt")
+        Strategy_Capability(sc_InfoCollectionMgt, "Information Collection Mgt")
+        Strategy_Capability(sc_CopyrightMgt, "Copyright Mgt")
+        Strategy_Capability(sc_KnowledgeMgt, "Knowledge Mgt")
+        Strategy_Capability(sc_InfoDataMgt, "Information & Data Mgt")
+        Strategy_Capability(sc_RecordsMgt, "Records Mgt")
+        Strategy_Capability(sc_EnterpriseContentMgt, "Enterprise Content Mgt")
+        Strategy_Capability(sc_BusinessOperationalReport, "Business & Operational Reporting")
+    }
+
+    Strategy_Capability(FacilitiesPropertyMgt, "Facilities & Property Management", true) {
+        Strategy_Capability(sc_EstateDevMgt, "Estate Development & Mgt")
+        Strategy_Capability(sc_CampusSecurity, "Campus Security")
+        Strategy_Capability(sc_SpaceUtilisation, "Space Utilisation")
+        Strategy_Capability(sc_PropertyMaintenance, "Property Maintenance")
+        Strategy_Capability(sc_EnvironmentalMgt, "Environmental Mgt")
+        Strategy_Capability(sc_CampusParking, "Campus Parking")
+        Strategy_Capability(sc_HealthSafety, "Health & Safety")
+        Strategy_Capability(sc_MallMgt, "Mail Mgt")
+        Strategy_Capability(sc_CommercialTenancy, "Commercial Tenancy")
+        Strategy_Capability(sc_VehicleMgt, "Vehicle Mgt")
+    }
+
+    Strategy_Capability(FinanceMgt, "Finance Management", true) {
+        Strategy_Capability(sc_ProcurementPurchasingMgt, "Procurement & Purchasing Mgt")
+        Strategy_Capability(sc_BudgetMgt, "Budget Mgt")
+        Strategy_Capability(sc_TreasuryMgt, "Treasury Mgt")
+        Strategy_Capability(sc_IncomeMgt, "Income Mgt")
+        Strategy_Capability(sc_InsuranceMgt, "Insurance Mgt")
+        Strategy_Capability(sc_AssetMgt, "Asset Mgt")
+        Strategy_Capability(sc_FinancialReporting, "Financial Reporting")
+        Strategy_Capability(sc_TaxationMgt, "Taxation Mgt")
+        Strategy_Capability(sc_FinancialAdvisory, "Financial Advisory")
+        Strategy_Capability(sc_ExpenditureMgt, "Expenditure Mgt")
+        Strategy_Capability(sc_SupplierMgt, "Supplier Mgt")
+    }
+
+    Strategy_Capability(AccommodationMgt, "Accommodation Management", true) {
+        Strategy_Capability(sc_AccommodationAllocation, "Accommodation Allocation")
+        Strategy_Capability(sc_AccommodationFacilitiesMgt, "Accommodation Facilities Mgt")
+        Strategy_Capability(sc_AccommodationIncidentEmergency, "Accommodation Incident & Emergency Response")
+        Strategy_Capability(sc_AccommodationDepartureTurnaroundMgt, "Accommodation Departure & Turnaround Mgt")
+        Strategy_Capability(sc_PrivateSectorHousingMgt, "Private Sector Housing Mgt")
+    }
+
+    Strategy_Capability(LegalServices, "Legal Services", true) {
+        Strategy_Capability(sc_ContractMgt, "Contract Mgt")
+        Strategy_Capability(sc_LegalLegislativeCompliance, "Legal & Legislative Compliance")
+        Strategy_Capability(sc_DisputeResolution, "Dispute Resolution")
+        Strategy_Capability(sc_LegalAdvisory, "Legal Advisory")
+    }
+}
+
+' -----------------------------
+' Legend at Bottom Right
+' -----------------------------
+legend right
+= PlantUML ArchiMate Legend
+<$archimate/strategy-capability> : Strategy Capability
+endlegend
+
+@enduml
