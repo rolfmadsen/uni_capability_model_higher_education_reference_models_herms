@@ -1,0 +1,11 @@
+@startuml uni_capability_model_StrategyGovernance
+
+!include <archimate/Archimate>
+!include archimate_custom_processing_and_styling.puml 
+' Source: https://github.com/plantuml-stdlib/Archimate-PlantUML
+
+title UNI Capability Model (HERMS) - Strategy Governance
+
+!includesub uni_capability_model.puml!StrategyGovernance
+
+@enduml

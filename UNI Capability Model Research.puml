@@ -1,0 +1,9 @@
+@startuml UNI Capability Model Research
+
+!include <archimate/Archimate>
+!include archimate_custom_processing_and_styling.puml 
+' Source: https://github.com/plantuml-stdlib/Archimate-PlantUML
+
+!includesub uni_capability_model.puml!Research
+
+@enduml

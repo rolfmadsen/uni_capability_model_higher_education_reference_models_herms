@@ -4,20 +4,22 @@
 !include archimate_custom_processing_and_styling.puml 
 ' Source: https://github.com/plantuml-stdlib/Archimate-PlantUML
 
-top to bottom direction
-' left to right direction
-skinparam wrapWidth 1024
+'top to bottom direction
+'left to right direction
+'skinparam wrapWidth 1024
 
-hide empty members
-skinparam nodesep 40
-skinparam ranksep 40
-skinparam linetype ortho
-skinparam WrapWidth 20
+'hide empty members
+'skinparam nodesep 40
+'skinparam ranksep 40
+'skinparam linetype ortho
+'skinparam WrapWidth 20
+
 title UNI Capability Model (HERMS)
 
 ' -----------------------------
 ' Strategy & Governance
 ' -----------------------------
+!startsub StrategyGovernance
 Strategy_Capability(sc_StrategyGovernance, "Strategy & Governance", true) {
     Strategy_Capability(sc_StrategyMgt, "Strategy Management", true) {
         Strategy_Capability(sc_BusinessHorizonScan, "Business Horizon Scanning")
@@ -45,10 +47,12 @@ Strategy_Capability(sc_StrategyGovernance, "Strategy & Governance", true) {
         Strategy_Capability(sc_BusinessContinuity, "Business Continuity Mgt")
     }
 }
+!endsub
 
 ' -----------------------------
 ' Teaching & Learning
 ' -----------------------------
+!startsub TeachingLearning
 Strategy_Capability(sc_TeachingLearning, "Teaching & Learning", true) {
     Strategy_Capability(sc_CurriculumMgt, "Curriculum Management", true) {
         Strategy_Capability(sc_CurriculumDesign, "Curriculum Design")
@@ -134,11 +138,12 @@ Strategy_Capability(sc_TeachingLearning, "Teaching & Learning", true) {
         Strategy_Capability(sc_PersonalTutorProvision, "Personal Tutor Provision")
     }
 }
+!endsub
 
 ' -----------------------------
 ' Research
 ' -----------------------------
-
+!startsub Research
 Strategy_Capability(sc_Research, "Research", true) {
     Strategy_Capability(sc_ResearchOpportunityAnalysis, "Research Opportunity Analysis", true) {
         Strategy_Capability(sc_ResearchPrioritisation, "Research Prioritisation")
@@ -185,10 +190,12 @@ Strategy_Capability(sc_Research, "Research", true) {
         Strategy_Capability(sc_ResearchInfraMgt, "Research Infrastructure Mgt")
     }
 }
+!endsub
 
 ' -----------------------------
 ' Commercial Activity
 ' -----------------------------
+!startsub CommercialActivity
 Strategy_Capability(CommercialActivity, "Commercial Activity", true) {
     Strategy_Capability(CommercialSourcing, "Commercial Sourcing", true) {
         Strategy_Capability(sc_CommOppId, "Commercial Opportunity Identification")
@@ -213,10 +220,12 @@ Strategy_Capability(CommercialActivity, "Commercial Activity", true) {
         Strategy_Capability(sc_CommContingencyPlan, "Commercial Contingency Planning")
     }
 }
+!endsub
 
 ' -----------------------------
 ' Enabling Capabilities
 ' -----------------------------
+!startsub EnablingCapabilities
 Strategy_Capability(EnablingCapabilities, "Enabling Capabilities", true) {
     Strategy_Capability(GovPubStakeholderRel, "Government, Public & Stakeholder Relationships", true) {
         Strategy_Capability(sc_GovRelMgt, "Government Relationship Mgt")
@@ -335,7 +344,7 @@ Strategy_Capability(EnablingCapabilities, "Enabling Capabilities", true) {
         Strategy_Capability(sc_LegalAdvisory, "Legal Advisory")
     }
 }
-
+!endsub
 ' -----------------------------
 ' Legend at Bottom Right
 ' -----------------------------
