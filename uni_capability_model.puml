@@ -1,18 +1,12 @@
 @startuml UNI Capability Model (HERMS)
-
-!include <archimate/Archimate>
-!include archimate_custom_processing_and_styling.puml 
 ' Source: https://github.com/plantuml-stdlib/Archimate-PlantUML
 
-'top to bottom direction
-'left to right direction
-'skinparam wrapWidth 1024
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/Archimate-PlantUML/master/Archimate.puml
+!theme archimate-standard from https://raw.githubusercontent.com/plantuml-stdlib/Archimate-PlantUML/master/themes
 
-'hide empty members
-'skinparam nodesep 40
-'skinparam ranksep 40
-'skinparam linetype ortho
-'skinparam WrapWidth 20
+'left to right direction
+'top to bottom direction
+!pragma layout smetana
 
 title UNI Capability Model (HERMS)
 

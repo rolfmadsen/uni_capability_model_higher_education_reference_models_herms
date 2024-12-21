@@ -1,5 +1,6 @@
 @startuml List of possible ArchiMate SequenceParticipantBorderThickness
 
 listsprites
-
+'listicons
+'path
 @enduml
